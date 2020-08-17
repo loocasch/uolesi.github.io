@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&subset=latin,latin-ext');
+@import '_custom.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+html {
+  font-size: $font-size-base + px !important;
+  max-width: 2030px;
+  margin: 0 auto;
+  position: relative;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  color: $color-gray;
+}
+
+.font-lora {
+  font-family: 'Lora', serif;
+}
+
+.text-gold{
+  color:$navbar-light-hover-color !important;
+}
+
+.navbar-brand {
+  position: absolute;
+}
+
+.wrapper-box {
+  max-width: 1930px;
+  margin: 0 auto;
+}
+
+.wrapper-small-box {
+  max-width: 1430px;
+  margin: 0 auto;
+}
+
+@for $i from 1 through 105 {
+  .font-size-#{$i} {
+    font-size: #{$i / $font-size-base}rem !important;
+  }
+}
+
+a,
+a:hover {
+  transition: $transition;
+}
+.text-default{
+  color: $dark;
+}
+
+a:hover {
+  color: $navbar-light-hover-color !important;
+}
+.scrollactive-nav{
+  margin: 0 auto;
+}
+#collapsibleNavId {
+
+  a {
+    padding: 0 25px;
+    &:focus{
+      color: $navbar-light-color;
+    }
+    &.is-active {
+      color: $navbar-light-hover-color !important;
+    }
+  }
+}
+
+.navbar{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+  border-bottom: 1px solid $navbar-light-hover-color;
+}
+
+#carousel-fade{
+  padding-top: 94px;
+}
+
+.item-box{
+  min-height: 100vh;
+  margin: 150px 0;
+}
+
+
+#rental, #menu{
+  .row > div{
+    max-width: 300px;
+  }
+}
+
+footer{
+  border-top: 1px solid $navbar-light-hover-color;
+}
+
+@media (max-width: 1199px) {
+  .item-box{
+    min-height: 1px;
+    margin: 30px 0
+  }
+  .navbar-brand{
+    position: relative;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar{
+    padding: 15px 1rem;
+  }
+  #carousel-fade{
+    padding-top: 83px;
+  }
+  #collapsibleNavId a{
+    text-align: center;
+    padding: 15px 0;
+  }
+  .item-box{
+    margin: 0 0;
+    padding: 35px 0;
+  }
+}
