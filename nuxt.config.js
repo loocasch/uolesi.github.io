@@ -65,7 +65,7 @@ export default {
     '@nuxt/content',
   ],
   router: {
-    base: '/uolesi/'
+    base: '/uolesi.github.io/'
   },
 
   bootstrapVue: {
